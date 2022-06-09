@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+using System;
+class Programa{
+	static void Main(string[] args){
+		float[] vetor = new float[5];
+		int codigo, i = 0;
+
+		while(i < 5){
+			Console.Write("Elemento {0}: ", i + 1);
+			vetor[i++] = Convert.ToSingle(Console.ReadLine());		
+		}
+
+		Console.Write("Código: ");
+		codigo = Convert.ToInt32(Console.ReadLine());
+
+		switch(codigo){
+			case 0: break;
+			case 1:
+				i = 0;
+				while(i < 5) Console.WriteLine(vetor[i++]);
+				break;
+			case 2:
+				i = 4;
+				while(i >= 0) Console.WriteLine(vetor[i--]);
+				break;
+			default: Console.WriteLine("Codigo invalido"); break;
+		}
+		Console.ReadKey();
+	}
+}
